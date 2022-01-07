@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+.dropdown-submenu {
+  position: relative;
+
+
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+
+}
+</style>
+
+<style>
+/* The container */
+.container3 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family:Tahoma
+}
+
+.label1 {
+  position: relative;
+  padding-left: 0px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container3 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container3:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container3 input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container3 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container3 .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+.block_button {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #04AA6D;
+  padding: 10px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  margin:0 auto;
+    display:block;
+    font-weight: bold;
+    font-family:Tahoma
+}
+
+.block_button2 {
+  display: block;
+  width: 100%;
+  border: solid-grey;
+  background-color: #FFFFFF;
+  padding: 10px 28px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  margin:0 auto;
+    display:block;
+    font-weight: bold;
+    font-family:Tahoma
+}
+
+.block_button:hover {
+  background-color: #009A6D;
+  color: black;
+}
+
+.dropdown-toggle {
+  background-color: #DDDDDD;
+  color: black;
+  padding: 8px 50px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+
+</head>
+<body>
+<img src="https://ci4.googleusercontent.com/proxy/bmM1yOye2Hhpn_LeskaD7sxm10N73KykwWD4Xb7mhYeJ-4-WQ_ySbYxyiAot5DUUZQeJCi7NAhOULNUz-yV8K54MnMnVBRIgr0HAg6NV4d2zNvAM2exaEPWp=s0-d-e1-ft#https://vg165.files.keap.app/vg165/23678d1f-569d-4012-a580-902f07614343" alt="Humanity's Team" style="width:75px;height:75px; display: block; margin-left: auto; margin-right: auto;">
+
+<div class="container0">
+  <h1 style="text-align:center; font-family:Tahoma ">HT Email Scheduler</h2>
+  <table style="width:100%">
+    <tr>
+            <td>
+                <label class="label1" for="email_name">Name of Email Send:</label><br>
+                  <input type="text" id="email_name" name="email_name"><br>
+      </td>
+      <td>
+          <label class="label1" for="send_date">Date of Send:</label><br>
+          <input type="date" id="send_date" name="send_date"></td>
+      <td>
+              <label class="label1" for="send_time">Time of Send:</label><br>
+                  <input type="time" id="send_time" name="send_time">
+      </td>
+      <td>
+      <label for="myfile">Select a file:</label>
+<input type="file" id="myfile" name="myfile">
+      </td>
+      </tr>
+      <tr style="background-color: white;">
+      <td>
+                <label class="label1" for="subject_a">Subject Line A:</label><br>
+                  <input type="text" id="subject_a" name="subject_a"><br>
+      </td>
+      <td>
+              <label class="container3" >Subject Line B to split test:
+                  <input type="checkbox" name="checkbox" id="checkbox" value="scheckbox">
+                  <span class="checkmark"></span>
+                </label>
+
+                <input id="subject_b" name="subject_b" type="text"/>
+
+      </td>
+      <td>
+        <div class="dropdown">
+        <label for="type_of_send">Send Type:</label><br>
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="send_to_list" name="send_to_list">Select List
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+            <a class="test" tabindex="-1" href="#">Promotion<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" href="#">A New Kind of Power</a></li>
+              <li><a tabindex="-1" href="#">Awaken the New Species In You</a></li>
+              <li><a tabindex="-1" href="#">Conscious Leadership</a></li>
+              <li><a tabindex="-1" href="#">Daring to Live an Authentic Life</a></li>
+              <li><a tabindex="-1" href="#">Deep Self Evolution</a></li>
+              <li><a tabindex="-1" href="#">Discover Your Soul's Purpose</a></li>
+              <li><a tabindex="-1" href="#">Forbidden Science</a></li>
+              <li><a tabindex="-1" href="#">Global Oneness Summit</a></li>
+              <li><a tabindex="-1" href="#">Healing The Past</a></li>
+              <li><a tabindex="-1" href="#">Higher Love, Quantum Sex</a></li>
+              <li><a tabindex="-1" href="#">Living in Awe &amp; Wonder</a></li>
+              <li><a tabindex="-1" href="#">Our Final Frontier</a></li>
+              <li><a tabindex="-1" href="#">The Science of Self Empowerment</a></li>
+              <li><a tabindex="-1" href="#">Technology, Consciousness, &amp; Evolution</a></li>
+              <li><a tabindex="-1" href="#">You Are Limitless</a></li>
+              <li><a tabindex="-1" href="#">Zen Photo</a></li>
+              <li class="dropdown-submenu">
+                <a class="test" href="#">Another dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">3rd level dropdown</a></li>
+                  <li><a href="#">3rd level dropdown</a></li>
+                </ul>
+              </li>
+                      </ul>
+          </li>
+          <li><a tabindex="-1" href="#">Stream+ Members</a></li>
+          <li><a tabindex="-1" href="#">Podcast</a></li>
+          <li><a tabindex="-1" href="#">Newsletter</a></li>
+          <li><a tabindex="-1" href="#">Accelebration</a></li>
+          <li><a tabindex="-1" href="#">Pure Heart</a></li>
+          <li><a tabindex="-1" href="#">Fundraising</a></li>
+        </ul>
+      </div>
+    </td>
+    <td>
+  <label class="container3">Send to Two Emails per Week?
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+      </td>
+    </tr>
+  </table>
+  <br />
+  <table style="width:40%; display: block;margin-left: auto;margin-right: auto;">
+  <tr>
+  <td>
+  <button type="button" class="block_button">Schedule Email</button>
+  </td>
+  <td>
+  <button type="button" class="block_button2">Send Test Email</button>
+  </td>
+  </tr>
+  </table>
+
+</div>
+<br />
+<br />
+<div class="container1">
+  <h2 style="text-align:center; font-family:Tahoma">Upcoming Sends</h2>
+  <table style="width:100%; border: 1px solid black; font-family:Tahoma">
+    <tr>
+            <th>
+            Name of Email
+            </th>
+            <th>
+            Date of Send
+            </th>
+            <th>
+            Time of Send
+            </th>
+            <th>
+            Subject A
+            </th>
+            <th>
+            Subject B
+            </th>
+            <th>
+            Send To List
+            </th>
+            <th>
+            Two Emails?
+            </th>
+            <th>
+            Cancel Send
+            </th>
+    </tr>
+    <tr>
+            <td>
+            <a href="https://www.cbinnerprise.com/email-staging" target="_blank" >Email Test 1</a>
+            </td>
+            <td>
+            01/06/2022
+            </td>
+            <td>
+            7:00AM Pacific
+            </td>
+            <td>
+            This is Subject Line A
+            </td>
+            <td>
+            This is Subject Line B
+            </td>
+            <td>
+            Test Group 1
+            </td>
+            <td>
+            No
+            </td>
+            <td>
+            <button onclick="myFunction()" type="button" style="background-color:#ffa3a3">Cancel Send</button>
+            </td>
+    </tr>
+    <tr>
+            <td>
+            <a href="https://www.cbinnerprise.com/email-staging" target="_blank" >Email Test 2</a>
+            </td>
+            <td>
+            01/07/2022
+            </td>
+            <td>
+            8:00AM Pacific
+            </td>
+            <td>
+            This is Subject Line A1
+            </td>
+            <td>
+            -
+            </td>
+            <td>
+            Test Group 2
+            </td>
+            <td>
+            No
+            </td>
+            <td>
+            <button onclick="myFunction()" type="button" style="background-color:#ffa3a3">Cancel Send</button>
+            </td>
+    </tr>
+   </table>
+</div>
+
+
+<script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+
+          });
+  $(".dropdown-menu li a").click(function(){
+          $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+          $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+        });
+       $(function () {
+        $('input[name="subject_b"]').hide();
+
+        //show it when the checkbox is clicked
+        $('input[name="checkbox"]').on('click', function () {
+            if ($(this).prop('checked')) {
+                $('input[name="subject_b"]').fadeIn();
+            } else {
+                $('input[name="subject_b"]').hide();
+            }
+        });
+    });
+
+});
+
+function myFunction() {
+  confirm("Are you sure you want to cancel this send?");
+}
+</script>
+
+</body>
+</html>
