@@ -173,81 +173,103 @@ tr:nth-child(even) {background-color: #f2f2f2;}
                   <input type="text" id="email_name" name="email_name"><br>
       </td>
       <td>
-          <label class="label1" for="send_date">Date of Send:</label><br>
-          <input type="date" id="send_date" name="send_date"></td>
+        <label class="label1" for="email_from">Send From Email Address:</label><br>
+          <input type="text" id="email_name" name="email_name"><br>
+
+        </td>
+
       <td>
-              <label class="label1" for="send_time">Time of Send:</label><br>
-                  <input type="time" id="send_time" name="send_time">
-      </td>
-      <td>
-      <label for="myfile">Select a file:</label>
-<input type="file" id="myfile" name="myfile">
-      </td>
+        <label class="label1" for="email_from">Send From Name:</label><br>
+          <input type="text" id="email_name" name="email_name"><br>
+
+
+</td>
+<td>
+  <div class="dropdown">
+  <label for="type_of_send">Send Type:</label><br>
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="send_to_list" name="send_to_list">Select List
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li class="dropdown-submenu">
+      <a class="test" tabindex="-1" href="#">Promotion<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a tabindex="-1" href="#">Stream+</a></li>
+        <li><a tabindex="-1" href="#">A New Kind of Power</a></li>
+        <li><a tabindex="-1" href="#">Awaken the New Species In You</a></li>
+        <li><a tabindex="-1" href="#">Conscious Leadership</a></li>
+        <li><a tabindex="-1" href="#">Daring to Live an Authentic Life</a></li>
+        <li><a tabindex="-1" href="#">Deep Self Evolution</a></li>
+        <li><a tabindex="-1" href="#">Discover Your Soul's Purpose</a></li>
+        <li><a tabindex="-1" href="#">Forbidden Science</a></li>
+        <li><a tabindex="-1" href="#">Global Oneness Summit</a></li>
+        <li><a tabindex="-1" href="#">Healing The Past</a></li>
+        <li><a tabindex="-1" href="#">Higher Love, Quantum Sex</a></li>
+        <li><a tabindex="-1" href="#">Living in Awe &amp; Wonder</a></li>
+        <li><a tabindex="-1" href="#">Our Final Frontier</a></li>
+        <li><a tabindex="-1" href="#">The Science of Self Empowerment</a></li>
+        <li><a tabindex="-1" href="#">Technology, Consciousness, &amp; Evolution</a></li>
+        <li><a tabindex="-1" href="#">You Are Limitless</a></li>
+        <li><a tabindex="-1" href="#">Zen Photo</a></li>
+                </ul>
+    </li>
+    <li><a tabindex="-1" href="#">Stream+ Members</a></li>
+    <li><a tabindex="-1" href="#">Podcast</a></li>
+    <li><a tabindex="-1" href="#">Newsletter</a></li>
+    <li><a tabindex="-1" href="#">Accelebration</a></li>
+    <li><a tabindex="-1" href="#">Pure Heart</a></li>
+    <li><a tabindex="-1" href="#">Fundraising</a></li>
+  </ul>
+</div>
+</td>
       </tr>
       <tr style="background-color: white;">
       <td>
-                <label class="label1" for="subject_a">Subject Line A:</label><br>
+                <label class="label1" for="subject_a">Subject Line:</label><br>
                   <input type="text" id="subject_a" name="subject_a"><br>
       </td>
       <td>
-              <label class="container3" >Subject Line B to split test:
-                  <input type="checkbox" name="checkbox" id="checkbox" value="scheckbox">
-                  <span class="checkmark"></span>
-                </label>
-
-                <input id="subject_b" name="subject_b" type="text"/>
+        <div class="dropdown">
+        <label for="type_of_send">Split Test</label><br>
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="send_to_list" name="send_to_list">None
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Subject Line</a></li>
+          <li><a tabindex="-1" href="#">Email Copy</a></li>
+          <li><a tabindex="-1" href="#">None</a></li>
+        </ul>
+      </div>
 
       </td>
       <td>
-        <div class="dropdown">
-        <label for="type_of_send">Send Type:</label><br>
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="send_to_list" name="send_to_list">Select List
-        <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li class="dropdown-submenu">
-            <a class="test" tabindex="-1" href="#">Promotion<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a tabindex="-1" href="#">A New Kind of Power</a></li>
-              <li><a tabindex="-1" href="#">Awaken the New Species In You</a></li>
-              <li><a tabindex="-1" href="#">Conscious Leadership</a></li>
-              <li><a tabindex="-1" href="#">Daring to Live an Authentic Life</a></li>
-              <li><a tabindex="-1" href="#">Deep Self Evolution</a></li>
-              <li><a tabindex="-1" href="#">Discover Your Soul's Purpose</a></li>
-              <li><a tabindex="-1" href="#">Forbidden Science</a></li>
-              <li><a tabindex="-1" href="#">Global Oneness Summit</a></li>
-              <li><a tabindex="-1" href="#">Healing The Past</a></li>
-              <li><a tabindex="-1" href="#">Higher Love, Quantum Sex</a></li>
-              <li><a tabindex="-1" href="#">Living in Awe &amp; Wonder</a></li>
-              <li><a tabindex="-1" href="#">Our Final Frontier</a></li>
-              <li><a tabindex="-1" href="#">The Science of Self Empowerment</a></li>
-              <li><a tabindex="-1" href="#">Technology, Consciousness, &amp; Evolution</a></li>
-              <li><a tabindex="-1" href="#">You Are Limitless</a></li>
-              <li><a tabindex="-1" href="#">Zen Photo</a></li>
-              <li class="dropdown-submenu">
-                <a class="test" href="#">Another dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">3rd level dropdown</a></li>
-                  <li><a href="#">3rd level dropdown</a></li>
-                </ul>
-              </li>
-                      </ul>
-          </li>
-          <li><a tabindex="-1" href="#">Stream+ Members</a></li>
-          <li><a tabindex="-1" href="#">Podcast</a></li>
-          <li><a tabindex="-1" href="#">Newsletter</a></li>
-          <li><a tabindex="-1" href="#">Accelebration</a></li>
-          <li><a tabindex="-1" href="#">Pure Heart</a></li>
-          <li><a tabindex="-1" href="#">Fundraising</a></li>
-        </ul>
-      </div>
-    </td>
-    <td>
-  <label class="container3">Send to Two Emails per Week?
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
+        <label for="myfile">Email HTML File:</label>
+  <input type="file" id="myfile" name="myfile">
 
       </td>
+
+      <td>
+        <label class="container3">Send to Two Emails per Week?
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+
+    </td>
+
+    </tr>
+    <tr>
+      <td>
+                <label class="label1" for="subject_a">Preheader:</label><br>
+                  <input type="text" id="subject_a" name="subject_a"><br>
+      </td>
+      <td>
+      </td>
+      <td>
+      <label class="label1" for="send_date">Date of Send:</label><br>
+      <input type="date" id="send_date" name="send_date">
+    </td>
+    <td>
+            <label class="label1" for="send_time">Time of Send:</label><br>
+                <input type="time" id="send_time" name="send_time">
+    </td>
     </tr>
   </table>
   <br />
